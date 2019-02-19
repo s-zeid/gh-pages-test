@@ -2,14 +2,16 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>{% if page.title %}{{ page.title | strip_html }} - {% endif %}{{ site.title | strip_html }}</title>
+  <title>{% if page.title %}{{ page.title | strip_html | escape }} - {% endif %}{{ site.title | strip_html | escape }}</title>
  </head>
  <body>
   <header>
    <h1>{{ site.title | escape }}</h1>
-{% include nav.html %}   <hr />
+{% include nav.html | rstrip %}
+   <hr />
   </header>
   <main>
-{{ content }}  </main>
+{{ content | rstrip }}
+  </main>
  </body>
 </html>
