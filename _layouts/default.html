@@ -5,7 +5,9 @@
   <title>{% if page.title %}{{ page.title | strip_html }} - {% endif %}{{ site.title | strip_html }}</title>
  </head>
  <body>
-  <header><h1>{{ site.title | escape }}</h1></header>
+  <header>
+   <h1>{{ site.title | escape }}</h1>
+{% include nav.html %}  </header>
   <main>
 {{ content }}  </main>
  </body>
