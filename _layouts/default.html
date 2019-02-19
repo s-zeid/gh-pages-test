@@ -7,8 +7,10 @@
  <body>
   <header>
    <h1>{{ site.title | escape }}</h1>
-{%- include nav.html -%}  </header>
+{%- include nav.html -%}
+</header>
   <main>
-{{ content }}  </main>
+{{- content -}}
+  </main>
  </body>
 </html>
